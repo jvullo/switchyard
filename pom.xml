@@ -20,7 +20,6 @@
         <java.version>25</java.version>
         <maven.compiler.release>25</maven.compiler.release>
         <maven.compiler.parameters>true</maven.compiler.parameters>
-        <preview.arg>--enable-preview</preview.arg>
     </properties>
 
     <dependencies>
