@@ -11,14 +11,16 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.joevullo.switchyard</groupId>
-    <artifactId>switchyard</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.switchyard</groupId>
+    <artifactId>switchyard-service</artifactId>
+    <version>0.1.0</version>
+    <name>switchyard-service</name>
 
     <properties>
         <java.version>25</java.version>
         <maven.compiler.release>25</maven.compiler.release>
-        <maven.compiler.enablePreview>true</maven.compiler.enablePreview>
+        <maven.compiler.parameters>true</maven.compiler.parameters>
+        <preview.arg>--enable-preview</preview.arg>
     </properties>
 
     <dependencies>
@@ -30,6 +32,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+            <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
         </dependency>
     </dependencies>
 
