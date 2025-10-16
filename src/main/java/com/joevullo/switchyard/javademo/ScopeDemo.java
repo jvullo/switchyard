@@ -1,4 +1,4 @@
-package com.joevullo.switchyard;
+package com.joevullo.switchyard.javademo;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.StructuredTaskScope;

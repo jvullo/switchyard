@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: switchyard
+
+  # Java 21 virtual threads for the servlet request executor. One line, and every
+  # request handler runs on a virtual thread instead of a pooled platform thread.
+  threads:
+    virtual:
+      enabled: true
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: all
+    consumer:
+      group-id: switchyard
+      auto-offset-reset: earliest
+
+switchyard:
+  orders:
+    max-order-total: 5000.00
+    topic: orders.events
+
+logging:
+  level:
+    com.joevullo.switchyard: DEBUG
